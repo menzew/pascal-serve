@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!pascal.py
+!pascal_stack/
+!pascal_stack/*.py
+!models.lock.json
+!patches/
+!patches/*
+!LICENSE
+!licenses/
+!licenses/*

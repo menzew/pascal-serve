@@ -1,0 +1,32 @@
+{
+  "default": "qwen38-4b-q4",
+  "models": {
+    "qwen38-4b-q4": {
+      "name": "Empero Qwen3.8-4B Distill Q4_K_M",
+      "provenance": "Community distillation of Qwen3.8-2.4T-A95B into Qwen3.5-4B; not an official Qwen 4B release.",
+      "repo": "empero-ai/Qwen3.8-4B-Distill-GGUF",
+      "revision": "391fc7d103e3942a408def3e4f51c2f85d464417",
+      "filename": "Qwen3.8-4B-Q4_K_M.gguf",
+      "bytes": 2783446304,
+      "sha256": "dec96e8cf2e11b613bb46513dec485377f9ca5a351e71712ee0e244f287c6790"
+    },
+    "qwen38-9b-q4": {
+      "name": "Empero Qwen3.8-9B Distill Q4_K_M",
+      "provenance": "Community distillation into Qwen3.5-9B; not an official Qwen 9B release.",
+      "repo": "empero-ai/Qwen3.8-9B-Distill-GGUF",
+      "revision": "760121cd70bb4c36b2b5ec58eb765e0df5987efe",
+      "filename": "Qwen3.8-9B-Q4_K_M.gguf",
+      "bytes": 5780090176,
+      "sha256": "df13d66021cef676f82be74053220fd75af6bf2a6a7fb77f5222ab9e50744a7a"
+    },
+    "qwen38-4b-q8": {
+      "name": "Empero Qwen3.8-4B Distill Q8_0",
+      "provenance": "Same community distillation, with less weight quantization and higher memory use.",
+      "repo": "empero-ai/Qwen3.8-4B-Distill-GGUF",
+      "revision": "391fc7d103e3942a408def3e4f51c2f85d464417",
+      "filename": "Qwen3.8-4B-Q8_0.gguf",
+      "bytes": 4610579744,
+      "sha256": "770b780d6754a4954d1caf395c9239eaeb394f15c7a7ea34039883377c93c9c3"
+    }
+  }
+}

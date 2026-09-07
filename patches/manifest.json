@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+  "patch": "pascal-q6-unpack.patch",
+  "sha256": "bf2f763cfe00a07120e6bd9cc11160d75ab8d649f9716539a1351a2a5040dd83",
+  "files": {
+    "ggml/src/ggml-cuda/vecdotq.cuh": {
+      "before": "5999bbc5cf24c070029183c075a66f3cb6aa4a9b57798e138b4610b45a704539",
+      "after": "5d7d4dfcac567ea5b85317b5621a9ba73afaf9fc98596cec0fd9c9134ae6cbb5"
+    }
+  },
+  "scope": "NVIDIA Pascal DP4A Q6_K matrix-vector unpacking; other paths unchanged"
+}

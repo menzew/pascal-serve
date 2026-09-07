@@ -1,0 +1,3896 @@
+{
+  "warps": {
+    "status": "ok",
+    "phase": "complete",
+    "validation": [
+      {
+        "engine": "mmvq-w1",
+        "op": "MUL_MAT,MUL_MAT_ID",
+        "returncode": 0,
+        "counts": [
+          [
+            "153",
+            "153"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "mmvq-w2",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "mmvq-w1",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      }
+    ],
+    "microbench": [
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 39,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 56,
+          "clock_mhz": 1860,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.17
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 288.32
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 195.41
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 287.39
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 57.75
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.37
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.14
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.33
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 188.74
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 194.26
+          }
+        ]
+      },
+      {
+        "engine": "mmvq-w2",
+        "before": {
+          "temperature_c": 55,
+          "clock_mhz": 1860,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 60,
+          "clock_mhz": 1746,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 183.52
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3408,
+            "us": 310.06
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 202.64
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3408,
+            "us": 312.6
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 55.93
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 60.67
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 13909,
+            "us": 81.09
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 87.95
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 181.05
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 195.85
+          }
+        ]
+      },
+      {
+        "engine": "mmvq-w1",
+        "before": {
+          "temperature_c": 60,
+          "clock_mhz": 1746,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 66,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 181.18
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3408,
+            "us": 329.62
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 209.45
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 2556,
+            "us": 393.71
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 56.17
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 16401,
+            "us": 64.43
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 13909,
+            "us": 81.25
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 10934,
+            "us": 94.53
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 181.03
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 207.09
+          }
+        ]
+      },
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 65,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 68,
+          "clock_mhz": 1708,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.72
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 290.45
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.78
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 289.5
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.05
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.82
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.51
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.82
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.9
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 195.34
+          }
+        ]
+      }
+    ],
+    "runs": [
+      {
+        "engine": "baseline",
+        "round": 0,
+        "before": {
+          "temperature_c": 68,
+          "clock_mhz": 1708,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.626201573999424,
+            "output_tokens": 256,
+            "tokens_per_second": 38.63450230740328,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 220.037,
+              "prompt_per_token_ms": 6.4716764705882355,
+              "prompt_per_second": 154.51946718051963,
+              "predicted_n": 256,
+              "predicted_ms": 6356.438,
+              "predicted_per_token_ms": 24.927207843137257,
+              "predicted_per_second": 40.11680755794361,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 75,
+              "clock_mhz": 1771,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.792902187000436,
+            "output_tokens": 256,
+            "tokens_per_second": 44.19201148855523,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 166.062,
+              "prompt_per_token_ms": 3.953857142857143,
+              "prompt_per_second": 252.91758499837408,
+              "predicted_n": 256,
+              "predicted_ms": 5559.553,
+              "predicted_per_token_ms": 21.80216862745098,
+              "predicted_per_second": 45.86699686107858,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 77,
+              "clock_mhz": 1759,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 228089,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 72,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-w2",
+        "round": 0,
+        "before": {
+          "temperature_c": 72,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.576550069999939,
+            "output_tokens": 256,
+            "tokens_per_second": 38.92618428738008,
+            "content_sha256": "878323875215945b23798fe9e2ba994329ff85626a7e2adeb3f0f6887d691ca1",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 153.657,
+              "prompt_per_token_ms": 4.519323529411765,
+              "prompt_per_second": 221.27205399038118,
+              "predicted_n": 256,
+              "predicted_ms": 6386.489,
+              "predicted_per_token_ms": 25.045054901960782,
+              "predicted_per_second": 39.928041839577276,
+              "draft_n": 148,
+              "draft_n_accepted": 107
+            },
+            "after": {
+              "temperature_c": 78,
+              "clock_mhz": 1759,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.030840146999253,
+            "output_tokens": 256,
+            "tokens_per_second": 42.44848043723678,
+            "content_sha256": "c8d4dab2637e832f6dcc01680e77f06c7ead1893be6bc31589503d0e91c7a26e",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 165.058,
+              "prompt_per_token_ms": 3.929952380952381,
+              "prompt_per_second": 254.4560094027554,
+              "predicted_n": 256,
+              "predicted_ms": 5798.67,
+              "predicted_per_token_ms": 22.739882352941176,
+              "predicted_per_second": 43.9756013016778,
+              "draft_n": 134,
+              "draft_n_accepted": 121
+            },
+            "after": {
+              "temperature_c": 80,
+              "clock_mhz": 1746,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 228314,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 76,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-w1",
+        "round": 0,
+        "before": {
+          "temperature_c": 76,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 7.462463363999632,
+            "output_tokens": 256,
+            "tokens_per_second": 34.30502603670975,
+            "content_sha256": "2aa9ae0354ef8929ba324c4210f509c4ba9ebe918bafb323bed1d2a6724fd46d",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 153.82,
+              "prompt_per_token_ms": 4.524117647058823,
+              "prompt_per_second": 221.03757638798595,
+              "predicted_n": 256,
+              "predicted_ms": 7272.303,
+              "predicted_per_token_ms": 28.518835294117647,
+              "predicted_per_second": 35.06454557792765,
+              "draft_n": 154,
+              "draft_n_accepted": 100
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1797,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.418425128000308,
+            "output_tokens": 256,
+            "tokens_per_second": 39.88517352694555,
+            "content_sha256": "c543884f6b2f7dd2afff3317c2f37becfe3a647052de26daa44c9bd8ea09288c",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 165.92,
+              "prompt_per_token_ms": 3.95047619047619,
+              "prompt_per_second": 253.1340405014465,
+              "predicted_n": 256,
+              "predicted_ms": 6186.179,
+              "predicted_per_token_ms": 24.25952549019608,
+              "predicted_per_second": 41.220921670711434,
+              "draft_n": 131,
+              "draft_n_accepted": 124
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1721,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 228491,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 79,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-w1",
+        "round": 1,
+        "before": {
+          "temperature_c": 78,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 7.519073261000813,
+            "output_tokens": 256,
+            "tokens_per_second": 34.04674899602263,
+            "content_sha256": "2aa9ae0354ef8929ba324c4210f509c4ba9ebe918bafb323bed1d2a6724fd46d",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 156.717,
+              "prompt_per_token_ms": 4.609323529411765,
+              "prompt_per_second": 216.95157513224473,
+              "predicted_n": 256,
+              "predicted_ms": 7326.677,
+              "predicted_per_token_ms": 28.732066666666665,
+              "predicted_per_second": 34.80431851984194,
+              "draft_n": 154,
+              "draft_n_accepted": 100
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1683,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.526941834999889,
+            "output_tokens": 256,
+            "tokens_per_second": 39.222044024849865,
+            "content_sha256": "c543884f6b2f7dd2afff3317c2f37becfe3a647052de26daa44c9bd8ea09288c",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 172.734,
+              "prompt_per_token_ms": 4.1127142857142855,
+              "prompt_per_second": 243.14842474556252,
+              "predicted_n": 256,
+              "predicted_ms": 6287.75,
+              "predicted_per_token_ms": 24.6578431372549,
+              "predicted_per_second": 40.55504751302135,
+              "draft_n": 131,
+              "draft_n_accepted": 124
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1657,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 228697,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 79,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-w2",
+        "round": 1,
+        "before": {
+          "temperature_c": 79,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.73369287999958,
+            "output_tokens": 256,
+            "tokens_per_second": 38.0177719064633,
+            "content_sha256": "878323875215945b23798fe9e2ba994329ff85626a7e2adeb3f0f6887d691ca1",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 156.054,
+              "prompt_per_token_ms": 4.589823529411765,
+              "prompt_per_second": 217.873300267856,
+              "predicted_n": 256,
+              "predicted_ms": 6541.967,
+              "predicted_per_token_ms": 25.654772549019608,
+              "predicted_per_second": 38.97910215688952,
+              "draft_n": 148,
+              "draft_n_accepted": 107
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.21959932000027,
+            "output_tokens": 256,
+            "tokens_per_second": 41.16020772862083,
+            "content_sha256": "c8d4dab2637e832f6dcc01680e77f06c7ead1893be6bc31589503d0e91c7a26e",
+            "identical_baseline": false,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 177.671,
+              "prompt_per_token_ms": 4.230261904761905,
+              "prompt_per_second": 236.3919829347502,
+              "predicted_n": 256,
+              "predicted_ms": 5975.089,
+              "predicted_per_token_ms": 23.431721568627452,
+              "predicted_per_second": 42.677188574094885,
+              "draft_n": 134,
+              "draft_n_accepted": 121
+            },
+            "after": {
+              "temperature_c": 83,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 228931,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 80,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "baseline",
+        "round": 1,
+        "before": {
+          "temperature_c": 80,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.735307691000344,
+            "output_tokens": 256,
+            "tokens_per_second": 38.008657027215676,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 158.8,
+              "prompt_per_token_ms": 4.670588235294118,
+              "prompt_per_second": 214.1057934508816,
+              "predicted_n": 256,
+              "predicted_ms": 6540.363,
+              "predicted_per_token_ms": 25.648482352941176,
+              "predicted_per_second": 38.988661638505384,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 83,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.967432174000351,
+            "output_tokens": 256,
+            "tokens_per_second": 42.899524039061994,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 178.226,
+              "prompt_per_token_ms": 4.243476190476191,
+              "prompt_per_second": 235.65585268142695,
+              "predicted_n": 256,
+              "predicted_ms": 5723.614,
+              "predicted_per_token_ms": 22.445545098039215,
+              "predicted_per_second": 44.55227064578429,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 84,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 229108,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 81,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        }
+      }
+    ],
+    "restart_returncode": 0
+  },
+  "row1": {
+    "status": "ok",
+    "phase": "complete",
+    "validation": [
+      {
+        "engine": "mmvq-r1",
+        "op": "MUL_MAT,MUL_MAT_ID",
+        "returncode": 0,
+        "counts": [
+          [
+            "153",
+            "153"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "mmvq-r1",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      }
+    ],
+    "microbench": [
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 47,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 62,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.01
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 289.46
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.15
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 288.65
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 57.96
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.61
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.33
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.76
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.43
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 194.43
+          }
+        ]
+      },
+      {
+        "engine": "mmvq-r1",
+        "before": {
+          "temperature_c": 62,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 67,
+          "clock_mhz": 1670,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.28
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 289.91
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4686,
+            "us": 222.44
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 2982,
+            "us": 340.72
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.18
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 16401,
+            "us": 65.82
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.5
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 10934,
+            "us": 95.95
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.03
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4686,
+            "us": 216.62
+          }
+        ]
+      },
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 66,
+          "clock_mhz": 1670,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 70,
+          "clock_mhz": 1695,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.28
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 290.73
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.76
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 289.66
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.15
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.85
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.51
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.93
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.85
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 195.13
+          }
+        ]
+      }
+    ],
+    "runs": [
+      {
+        "engine": "baseline",
+        "round": 0,
+        "before": {
+          "temperature_c": 69,
+          "clock_mhz": 1847,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.591847355999562,
+            "output_tokens": 256,
+            "tokens_per_second": 38.83585073719917,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 157.925,
+              "prompt_per_token_ms": 4.644852941176471,
+              "prompt_per_second": 215.29206902010446,
+              "predicted_n": 256,
+              "predicted_ms": 6397.018,
+              "predicted_per_token_ms": 25.086345098039217,
+              "predicted_per_second": 39.86232335128649,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 76,
+              "clock_mhz": 1746,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.843631600000663,
+            "output_tokens": 256,
+            "tokens_per_second": 43.80837423084148,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 166.269,
+              "prompt_per_token_ms": 3.9587857142857144,
+              "prompt_per_second": 252.60271006621798,
+              "predicted_n": 256,
+              "predicted_ms": 5609.579,
+              "predicted_per_token_ms": 21.998349019607844,
+              "predicted_per_second": 45.45795682706314,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 78,
+              "clock_mhz": 1759,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 319758,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 73,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-r1",
+        "round": 0,
+        "before": {
+          "temperature_c": 73,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 7.222326372999305,
+            "output_tokens": 256,
+            "tokens_per_second": 35.44564268890658,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 157.699,
+              "prompt_per_token_ms": 4.638205882352942,
+              "prompt_per_second": 215.60060621817513,
+              "predicted_n": 256,
+              "predicted_ms": 7028.028,
+              "predicted_per_token_ms": 27.56089411764706,
+              "predicted_per_second": 36.28329312290731,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 80,
+              "clock_mhz": 1695,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.414417972000592,
+            "output_tokens": 256,
+            "tokens_per_second": 39.91009022446914,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 174.71,
+              "prompt_per_token_ms": 4.159761904761905,
+              "prompt_per_second": 240.39837444908704,
+              "predicted_n": 256,
+              "predicted_ms": 6170.796,
+              "predicted_per_token_ms": 24.1992,
+              "predicted_per_second": 41.32368012165691,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 81,
+              "clock_mhz": 1695,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 319953,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 77,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-r1",
+        "round": 1,
+        "before": {
+          "temperature_c": 77,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 7.249686766001105,
+            "output_tokens": 256,
+            "tokens_per_second": 35.31187046598545,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 157.853,
+              "prompt_per_token_ms": 4.642735294117648,
+              "prompt_per_second": 215.39026816088383,
+              "predicted_n": 256,
+              "predicted_ms": 7055.014,
+              "predicted_per_token_ms": 27.66672156862745,
+              "predicted_per_second": 36.14450658779699,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1657,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 6.468793269999878,
+            "output_tokens": 256,
+            "tokens_per_second": 39.57461450920734,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 166.998,
+              "prompt_per_token_ms": 3.976142857142857,
+              "prompt_per_second": 251.500017964287,
+              "predicted_n": 256,
+              "predicted_ms": 6234.386,
+              "predicted_per_token_ms": 24.44857254901961,
+              "predicted_per_second": 40.902183470834174,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 320156,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 79,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "baseline",
+        "round": 1,
+        "before": {
+          "temperature_c": 79,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.686853761000748,
+            "output_tokens": 256,
+            "tokens_per_second": 38.28407336990831,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 155.073,
+              "prompt_per_token_ms": 4.560970588235294,
+              "prompt_per_second": 219.2515782889349,
+              "predicted_n": 256,
+              "predicted_ms": 6494.944,
+              "predicted_per_token_ms": 25.47036862745098,
+              "predicted_per_second": 39.261308488572034,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.96286317600061,
+            "output_tokens": 256,
+            "tokens_per_second": 42.93239546906783,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 172.058,
+              "prompt_per_token_ms": 4.096619047619048,
+              "prompt_per_second": 244.10373246230924,
+              "predicted_n": 256,
+              "predicted_ms": 5722.006,
+              "predicted_per_token_ms": 22.439239215686275,
+              "predicted_per_second": 44.564790739471434,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 83,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 320656,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 80,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      }
+    ],
+    "restart_returncode": 0
+  },
+  "row4": {
+    "status": "ok",
+    "phase": "complete",
+    "validation": [
+      {
+        "engine": "mmvq-r4",
+        "op": "MUL_MAT,MUL_MAT_ID",
+        "returncode": 0,
+        "counts": [
+          [
+            "153",
+            "153"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "mmvq-r4",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      }
+    ],
+    "microbench": [
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 71,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 81,
+          "clock_mhz": 1657,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.86
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 291.68
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 198.01
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 291.98
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.38
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 60.21
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.87
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 87.35
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.47
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.34
+          }
+        ]
+      },
+      {
+        "engine": "mmvq-r4",
+        "before": {
+          "temperature_c": 80,
+          "clock_mhz": 1657,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 81,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 186.26
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 291.65
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 289.85
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 2556,
+            "us": 458.2
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.6
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 94.55
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.18
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 7952,
+            "us": 133.86
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 187.53
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3408,
+            "us": 297.89
+          }
+        ]
+      },
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 81,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 82,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 191.18
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3408,
+            "us": 294.13
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 198.78
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 293.71
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.99
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 60.89
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 85.45
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 88.69
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 192.03
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 197.5
+          }
+        ]
+      }
+    ],
+    "runs": [
+      {
+        "engine": "baseline",
+        "round": 0,
+        "before": {
+          "temperature_c": 82,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.724187212999823,
+            "output_tokens": 256,
+            "tokens_per_second": 38.07151584136103,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 157.753,
+              "prompt_per_token_ms": 4.6397941176470585,
+              "prompt_per_second": 215.52680456156145,
+              "predicted_n": 256,
+              "predicted_ms": 6530.22,
+              "predicted_per_token_ms": 25.608705882352943,
+              "predicted_per_second": 39.0492203937999,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 84,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.959979249999378,
+            "output_tokens": 256,
+            "tokens_per_second": 42.9531696775667,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 173.6,
+              "prompt_per_token_ms": 4.133333333333333,
+              "prompt_per_second": 241.93548387096777,
+              "predicted_n": 256,
+              "predicted_ms": 5719.87,
+              "predicted_per_token_ms": 22.43086274509804,
+              "predicted_per_second": 44.58143279480129,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 85,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 499273,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 81,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-r4",
+        "round": 0,
+        "before": {
+          "temperature_c": 81,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 9.700970374000462,
+            "output_tokens": 256,
+            "tokens_per_second": 26.389112648576344,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 190.973,
+              "prompt_per_token_ms": 5.616852941176471,
+              "prompt_per_second": 178.03563854576302,
+              "predicted_n": 256,
+              "predicted_ms": 9473.733,
+              "predicted_per_token_ms": 37.15189411764706,
+              "predicted_per_second": 26.916528046547224,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 84,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 8.544037173000106,
+            "output_tokens": 256,
+            "tokens_per_second": 29.962416456822318,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 209.676,
+              "prompt_per_token_ms": 4.992285714285714,
+              "prompt_per_second": 200.30904824586506,
+              "predicted_n": 256,
+              "predicted_ms": 8267.497,
+              "predicted_per_token_ms": 32.4215568627451,
+              "predicted_per_second": 30.843676145271058,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 85,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 499466,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 82,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "mmvq-r4",
+        "round": 1,
+        "before": {
+          "temperature_c": 82,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 9.703827552999428,
+            "output_tokens": 256,
+            "tokens_per_second": 26.381342681720582,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 196.495,
+              "prompt_per_token_ms": 5.779264705882353,
+              "prompt_per_second": 173.0323926817476,
+              "predicted_n": 256,
+              "predicted_ms": 9471.197,
+              "predicted_per_token_ms": 37.14194901960784,
+              "predicted_per_second": 26.923735194189288,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 85,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 8.544664533999821,
+            "output_tokens": 256,
+            "tokens_per_second": 29.960216575075357,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 206.262,
+              "prompt_per_token_ms": 4.911,
+              "prompt_per_second": 203.62451639177357,
+              "predicted_n": 256,
+              "predicted_ms": 8271.752,
+              "predicted_per_token_ms": 32.4382431372549,
+              "predicted_per_second": 30.827810118098316,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 85,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 499711,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 83,
+          "clock_mhz": 1683,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "baseline",
+        "round": 1,
+        "before": {
+          "temperature_c": 83,
+          "clock_mhz": 1620,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.745726288998412,
+            "output_tokens": 256,
+            "tokens_per_second": 37.94995364954397,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 161.979,
+              "prompt_per_token_ms": 4.764088235294118,
+              "prompt_per_second": 209.90375295563004,
+              "predicted_n": 256,
+              "predicted_ms": 6547.544,
+              "predicted_per_token_ms": 25.676643137254903,
+              "predicted_per_second": 38.94590093629,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 86,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.961443741998664,
+            "output_tokens": 256,
+            "tokens_per_second": 42.94261777503114,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 175.373,
+              "prompt_per_token_ms": 4.175547619047618,
+              "prompt_per_second": 239.48954514092821,
+              "predicted_n": 256,
+              "predicted_ms": 5719.914,
+              "predicted_per_token_ms": 22.431035294117645,
+              "predicted_per_second": 44.58108985554678,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 86,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 499939,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 84,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        }
+      }
+    ],
+    "restart_returncode": 0
+  },
+  "q6_unpack": {
+    "status": "ok",
+    "phase": "complete",
+    "validation": [
+      {
+        "engine": "q6-pack",
+        "op": "MUL_MAT,MUL_MAT_ID",
+        "returncode": 0,
+        "counts": [
+          [
+            "153",
+            "153"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "baseline",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      },
+      {
+        "engine": "q6-pack",
+        "op": "MUL_MAT_VEC_FUSION",
+        "returncode": 0,
+        "counts": [
+          [
+            "108",
+            "108"
+          ]
+        ]
+      }
+    ],
+    "microbench": [
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 50,
+          "clock_mhz": 1607,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 64,
+          "clock_mhz": 1645,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 191.2
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 289.49
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.16
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 288.96
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 57.85
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.54
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.25
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.51
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.4
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 195.71
+          }
+        ]
+      },
+      {
+        "engine": "q6-pack",
+        "before": {
+          "temperature_c": 63,
+          "clock_mhz": 1809,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 69,
+          "clock_mhz": 1708,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.73
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 275.94
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 196.81
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 281.03
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.0
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.74
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.45
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.79
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 189.74
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5538,
+            "us": 195.15
+          }
+        ]
+      },
+      {
+        "engine": "baseline",
+        "before": {
+          "temperature_c": 69,
+          "clock_mhz": 1708,
+          "used_mib": 303
+        },
+        "after": {
+          "temperature_c": 72,
+          "clock_mhz": 1683,
+          "used_mib": 303
+        },
+        "samples": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.18
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 4260,
+            "us": 290.81
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 197.21
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 3834,
+            "us": 289.86
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17886,
+            "us": 58.13
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 17892,
+            "us": 59.9
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11922,
+            "us": 84.64
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=6144,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 11928,
+            "us": 86.96
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=1,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5964,
+            "us": 190.23
+          },
+          {
+            "params": "type_a=q4_K,type_b=f32,m=14336,n=2,k=4096,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "runs": 5112,
+            "us": 195.64
+          }
+        ]
+      }
+    ],
+    "runs": [
+      {
+        "engine": "baseline",
+        "round": 0,
+        "before": {
+          "temperature_c": 71,
+          "clock_mhz": 1683,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.562191555000027,
+            "output_tokens": 256,
+            "tokens_per_second": 39.01135738790529,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 163.583,
+              "prompt_per_token_ms": 4.811264705882353,
+              "prompt_per_second": 207.84555852380748,
+              "predicted_n": 256,
+              "predicted_ms": 6361.937,
+              "predicted_per_token_ms": 24.94877254901961,
+              "predicted_per_second": 40.08213221853659,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 77,
+              "clock_mhz": 1746,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.810137287000543,
+            "output_tokens": 256,
+            "tokens_per_second": 44.06092099970994,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 164.359,
+              "prompt_per_token_ms": 3.913309523809524,
+              "prompt_per_second": 255.53818166331016,
+              "predicted_n": 256,
+              "predicted_ms": 5577.446,
+              "predicted_per_token_ms": 21.87233725490196,
+              "predicted_per_second": 45.71985098555862,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 79,
+              "clock_mhz": 1733,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 410775,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 75,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "q6-pack",
+        "round": 0,
+        "before": {
+          "temperature_c": 75,
+          "clock_mhz": 1835,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.628702519999933,
+            "output_tokens": 256,
+            "tokens_per_second": 38.619925879552454,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 260.749,
+              "prompt_per_token_ms": 7.669088235294119,
+              "prompt_per_second": 130.3935969073707,
+              "predicted_n": 256,
+              "predicted_ms": 6320.971,
+              "predicted_per_token_ms": 24.78812156862745,
+              "predicted_per_second": 40.341903166459716,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 81,
+              "clock_mhz": 1746,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.7721190140000544,
+            "output_tokens": 256,
+            "tokens_per_second": 44.35112986739909,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 164.672,
+              "prompt_per_token_ms": 3.9207619047619047,
+              "prompt_per_second": 255.0524679362612,
+              "predicted_n": 256,
+              "predicted_ms": 5536.097,
+              "predicted_per_token_ms": 21.710184313725488,
+              "predicted_per_second": 46.06133165658044,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1683,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 410954,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 78,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "q6-pack",
+        "round": 1,
+        "before": {
+          "temperature_c": 78,
+          "clock_mhz": 1822,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.557407954000155,
+            "output_tokens": 256,
+            "tokens_per_second": 39.03981600593184,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 154.991,
+              "prompt_per_token_ms": 4.558558823529412,
+              "prompt_per_second": 219.3675761818428,
+              "predicted_n": 256,
+              "predicted_ms": 6366.061,
+              "predicted_per_token_ms": 24.964945098039216,
+              "predicted_per_second": 40.05616659972313,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1683,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.876593745999344,
+            "output_tokens": 256,
+            "tokens_per_second": 43.56265058721801,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 166.844,
+              "prompt_per_token_ms": 3.9724761904761903,
+              "prompt_per_second": 251.73215698496801,
+              "predicted_n": 256,
+              "predicted_ms": 5641.544,
+              "predicted_per_token_ms": 22.123701960784313,
+              "predicted_per_second": 45.20039194943796,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 411187,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 79,
+          "clock_mhz": 1797,
+          "used_mib": 303
+        }
+      },
+      {
+        "engine": "baseline",
+        "round": 1,
+        "before": {
+          "temperature_c": 79,
+          "clock_mhz": 1797,
+          "used_mib": 303
+        },
+        "tasks": [
+          {
+            "task": "writing",
+            "wall_seconds": 6.684362908999901,
+            "output_tokens": 256,
+            "tokens_per_second": 38.29833949549907,
+            "content_sha256": "2d9bacc382b9d2a2a540df1ec6e513a1d881711db7bc8c86f46982be86261f11",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 34,
+              "prompt_ms": 157.377,
+              "prompt_per_token_ms": 4.628735294117647,
+              "prompt_per_second": 216.04173417970858,
+              "predicted_n": 256,
+              "predicted_ms": 6489.67,
+              "predicted_per_token_ms": 25.449686274509805,
+              "predicted_per_second": 39.29321521741475,
+              "draft_n": 152,
+              "draft_n_accepted": 103
+            },
+            "after": {
+              "temperature_c": 82,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          },
+          {
+            "task": "coding",
+            "wall_seconds": 5.95983386700027,
+            "output_tokens": 256,
+            "tokens_per_second": 42.95421746862401,
+            "content_sha256": "28e070a05802a34b53caab28baece950a38c800640d1cf72066362d3d85842af",
+            "identical_baseline": true,
+            "timings": {
+              "cache_n": 0,
+              "prompt_n": 42,
+              "prompt_ms": 176.765,
+              "prompt_per_token_ms": 4.208690476190476,
+              "prompt_per_second": 237.60359799734113,
+              "predicted_n": 256,
+              "predicted_ms": 5716.162,
+              "predicted_per_token_ms": 22.416321568627453,
+              "predicted_per_second": 44.61035219085813,
+              "draft_n": 132,
+              "draft_n_accepted": 122
+            },
+            "after": {
+              "temperature_c": 83,
+              "clock_mhz": 1607,
+              "used_mib": 6753
+            }
+          }
+        ],
+        "runtime": {
+          "pid": 411391,
+          "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+          "device": {
+            "index": "0",
+            "name": "NVIDIA GeForce GTX 1080",
+            "compute_cap": "6.1",
+            "total_mib": 8192,
+            "free_mib": 7803,
+            "driver": "570.211.01"
+          },
+          "context": 32768,
+          "reserve_mib": 768,
+          "gpu_layers": [
+            34,
+            34
+          ],
+          "flash_attention": true,
+          "kv_cache": "f16",
+          "batch": 1024,
+          "ubatch": 256,
+          "cache_ram_mib": 512,
+          "checkpoints": 4,
+          "mtp_draft_tokens": 1,
+          "mtp_active": true,
+          "port": 18080
+        },
+        "after": {
+          "temperature_c": 80,
+          "clock_mhz": 1771,
+          "used_mib": 303
+        }
+      }
+    ],
+    "restart_returncode": 0
+  },
+  "mmq_tiles": {
+    "status": "ok",
+    "rows": [
+      {
+        "j": 64,
+        "samples": [
+          {
+            "wall_seconds": 6.9195544559988775,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 6857.991,
+            "prompt_per_second": 597.2594598038988,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 6.88825911099957,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 6885.771,
+            "prompt_per_second": 594.8498722946204,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5221.12
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5923.63
+          }
+        ]
+      },
+      {
+        "j": 32,
+        "samples": [
+          {
+            "wall_seconds": 8.462608148000072,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 8399.821,
+            "prompt_per_second": 487.6294387701833,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 8.435692102000758,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 8433.223,
+            "prompt_per_second": 485.6980539943032,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 6780.88
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 8047.02
+          }
+        ]
+      },
+      {
+        "j": 48,
+        "samples": [
+          {
+            "wall_seconds": 8.278488181000284,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 8217.436,
+            "prompt_per_second": 498.4523152964015,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 8.267657230999248,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 8264.866,
+            "prompt_per_second": 495.5918220573691,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 6078.99
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 6924.86
+          }
+        ]
+      },
+      {
+        "j": 16,
+        "samples": [
+          {
+            "wall_seconds": 10.98030775100051,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 10917.215,
+            "prompt_per_second": 375.18726158640277,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 11.127829623999787,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 11124.717,
+            "prompt_per_second": 368.18914135074175,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 9063.79
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 11731.05
+          }
+        ]
+      },
+      {
+        "j": 64,
+        "samples": [
+          {
+            "wall_seconds": 7.465174461998686,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 7403.157,
+            "prompt_per_second": 553.2774733806132,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 7.467461603000629,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 7465.087,
+            "prompt_per_second": 548.6875102728206,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5473.83
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 6170.2
+          }
+        ]
+      }
+    ]
+  },
+  "prefill_blas": {
+    "status": "ok",
+    "rows": [
+      {
+        "j": 0,
+        "samples": [
+          {
+            "wall_seconds": 6.975819536999552,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 6915.234,
+            "prompt_per_second": 592.3154588839654,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 6.955869703000644,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 6953.47,
+            "prompt_per_second": 589.0584125623609,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5260.67
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5965.07
+          }
+        ]
+      },
+      {
+        "j": 1,
+        "samples": [
+          {
+            "wall_seconds": 14.052889962000336,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 13989.509,
+            "prompt_per_second": 292.7908334738553,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 14.097624919000737,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 14095.093,
+            "prompt_per_second": 290.5975859825827,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 14027.67
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 13460.14
+          }
+        ]
+      },
+      {
+        "j": 0,
+        "samples": [
+          {
+            "wall_seconds": 7.206058055999165,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 7144.344,
+            "prompt_per_second": 573.3206575719198,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          },
+          {
+            "wall_seconds": 7.426128384000549,
+            "requested_prompt_tokens": 4096,
+            "reused_prefix_tokens": 0,
+            "prompt_n": 4096,
+            "prompt_ms": 7423.567,
+            "prompt_per_second": 551.7563187615873,
+            "predicted_n": 1,
+            "predicted_ms": 0.001,
+            "predicted_per_second": 0.0
+          }
+        ],
+        "microbench": [
+          {
+            "params": "type_a=q4_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 5435.56
+          },
+          {
+            "params": "type_a=q6_K,type_b=f32,m=4096,n=512,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+            "us": 6149.59
+          }
+        ]
+      }
+    ]
+  },
+  "profile": [
+    {
+      "phase": "pascal/prefill4096",
+      "wall_ms": 6938.883181,
+      "kernel_ms": 6721.277918,
+      "kernels": [
+        {
+          "name": "mul_mat_q",
+          "calls": 4096,
+          "ms": 5266.06235,
+          "mean_us": 1285.6597534179687,
+          "max_registers": 119,
+          "percent": 78.34912369710464
+        },
+        {
+          "name": "flash_attn_tile",
+          "calls": 153,
+          "ms": 457.486899,
+          "mean_us": 2990.110450980392,
+          "max_registers": 128,
+          "percent": 6.806546382717215
+        },
+        {
+          "name": "gated_delta_net_cuda",
+          "calls": 408,
+          "ms": 400.332235,
+          "mean_us": 981.2064583333333,
+          "max_registers": 54,
+          "percent": 5.956192258140158
+        },
+        {
+          "name": "quantize_mmq_q8_1",
+          "calls": 4096,
+          "ms": 122.293617,
+          "mean_us": 29.856840087890625,
+          "max_registers": 27,
+          "percent": 1.8194994834611746
+        },
+        {
+          "name": "unary_gated_op_kernel",
+          "calls": 1122,
+          "ms": 101.367137,
+          "mean_us": 90.34504188948307,
+          "max_registers": 24,
+          "percent": 1.508152738760177
+        },
+        {
+          "name": "rms_norm_f32",
+          "calls": 1904,
+          "ms": 98.430243,
+          "mean_us": 51.69655619747899,
+          "max_registers": 31,
+          "percent": 1.4644572684072132
+        },
+        {
+          "name": "concat_non_cont",
+          "calls": 408,
+          "ms": 55.059984,
+          "mean_us": 134.9509411764706,
+          "max_registers": 30,
+          "percent": 0.8191892177608955
+        },
+        {
+          "name": "k_bin_bcast",
+          "calls": 1938,
+          "ms": 53.927627,
+          "mean_us": 27.826432920536632,
+          "max_registers": 23,
+          "percent": 0.8023418709644258
+        },
+        {
+          "name": "ssm_conv_long_token_f32",
+          "calls": 384,
+          "ms": 49.036392,
+          "mean_us": 127.6989375,
+          "max_registers": 40,
+          "percent": 0.7295694747077411
+        },
+        {
+          "name": "mul_mat_vec_q",
+          "calls": 257,
+          "ms": 40.623485,
+          "mean_us": 158.06803501945524,
+          "max_registers": 95,
+          "percent": 0.6044012090499604
+        },
+        {
+          "name": "cpy_scalar",
+          "calls": 969,
+          "ms": 25.961352,
+          "mean_us": 26.79190092879257,
+          "max_registers": 31,
+          "percent": 0.3862561899199837
+        },
+        {
+          "name": "l2_norm_f32",
+          "calls": 816,
+          "ms": 15.712423,
+          "mean_us": 19.255420343137256,
+          "max_registers": 30,
+          "percent": 0.23377136300109172
+        },
+        {
+          "name": "flash_attn_combine_results",
+          "calls": 153,
+          "ms": 10.832931,
+          "mean_us": 70.8034705882353,
+          "max_registers": 30,
+          "percent": 0.16117368054352788
+        },
+        {
+          "name": "k_get_rows_float_vec",
+          "calls": 408,
+          "ms": 7.774135,
+          "mean_us": 19.054252450980393,
+          "max_registers": 40,
+          "percent": 0.11566453723302207
+        },
+        {
+          "name": "rope_multi",
+          "calls": 306,
+          "ms": 5.795629,
+          "mean_us": 18.939964052287582,
+          "max_registers": 20,
+          "percent": 0.08622808148550062
+        },
+        {
+          "name": "k_set_rows",
+          "calls": 306,
+          "ms": 4.359245,
+          "mean_us": 14.245898692810457,
+          "max_registers": 24,
+          "percent": 0.06485738356876555
+        },
+        {
+          "name": "concat_cont",
+          "calls": 17,
+          "ms": 2.033396,
+          "mean_us": 119.61152941176469,
+          "max_registers": 38,
+          "percent": 0.03025311592241171
+        },
+        {
+          "name": "k_get_rows_float",
+          "calls": 409,
+          "ms": 1.875502,
+          "mean_us": 4.5855794621026895,
+          "max_registers": 40,
+          "percent": 0.027903949559611115
+        },
+        {
+          "name": "unary_op_kernel",
+          "calls": 816,
+          "ms": 1.09438,
+          "mean_us": 1.3411519607843139,
+          "max_registers": 9,
+          "percent": 0.016282320316932324
+        },
+        {
+          "name": "quantize_q8_1",
+          "calls": 257,
+          "ms": 0.570023,
+          "mean_us": 2.217988326848249,
+          "max_registers": 23,
+          "percent": 0.008480872342347918
+        },
+        {
+          "name": "scale_f32",
+          "calls": 48,
+          "ms": 0.526117,
+          "mean_us": 10.960770833333333,
+          "max_registers": 21,
+          "percent": 0.007827633471174074
+        },
+        {
+          "name": "ssm_conv_f32",
+          "calls": 24,
+          "ms": 0.122816,
+          "mean_us": 5.117333333333333,
+          "max_registers": 46,
+          "percent": 0.0018272715620208343
+        }
+      ]
+    },
+    {
+      "phase": "pascal/writing256",
+      "wall_ms": 6795.179469,
+      "kernel_ms": 6257.095126,
+      "kernels": [
+        {
+          "name": "mul_mat_vec_q",
+          "calls": 40537,
+          "ms": 5467.362635,
+          "mean_us": 134.87339060611293,
+          "max_registers": 95,
+          "percent": 87.37860820241588
+        },
+        {
+          "name": "concat_non_cont",
+          "calls": 3696,
+          "ms": 128.858624,
+          "mean_us": 34.86434632034632,
+          "max_registers": 30,
+          "percent": 2.059400111475946
+        },
+        {
+          "name": "gated_delta_net_cuda",
+          "calls": 3696,
+          "ms": 104.476658,
+          "mean_us": 28.267494047619046,
+          "max_registers": 54,
+          "percent": 1.6697310156892124
+        },
+        {
+          "name": "rms_norm_f32",
+          "calls": 18312,
+          "ms": 81.31687,
+          "mean_us": 4.440632918304937,
+          "max_registers": 31,
+          "percent": 1.2995945940170446
+        },
+        {
+          "name": "quantize_q8_1",
+          "calls": 40537,
+          "ms": 72.089646,
+          "mean_us": 1.7783665786812048,
+          "max_registers": 23,
+          "percent": 1.1521264188624387
+        },
+        {
+          "name": "k_get_rows_float_vec",
+          "calls": 3696,
+          "ms": 66.026058,
+          "mean_us": 17.86419318181818,
+          "max_registers": 40,
+          "percent": 1.0552190220929047
+        },
+        {
+          "name": "mul_mat_q",
+          "calls": 256,
+          "ms": 62.881065,
+          "mean_us": 245.62916015625,
+          "max_registers": 110,
+          "percent": 1.0049561934692568
+        },
+        {
+          "name": "k_bin_bcast",
+          "calls": 17556,
+          "ms": 51.549024,
+          "mean_us": 2.9362624743677377,
+          "max_registers": 23,
+          "percent": 0.8238491338544498
+        },
+        {
+          "name": "cpy_scalar",
+          "calls": 8930,
+          "ms": 48.226983,
+          "mean_us": 5.400558006718925,
+          "max_registers": 31,
+          "percent": 0.7707567493996254
+        },
+        {
+          "name": "flash_attn_tile",
+          "calls": 1538,
+          "ms": 30.029333,
+          "mean_us": 19.52492392717815,
+          "max_registers": 168,
+          "percent": 0.479924508023214
+        },
+        {
+          "name": "unary_gated_op_kernel",
+          "calls": 10316,
+          "ms": 26.584182,
+          "mean_us": 2.5769854594804187,
+          "max_registers": 24,
+          "percent": 0.4248645971440518
+        },
+        {
+          "name": "l2_norm_f32",
+          "calls": 7392,
+          "ms": 24.157637,
+          "mean_us": 3.2680785984848484,
+          "max_registers": 30,
+          "percent": 0.3860839017712578
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "calls": 608,
+          "ms": 22.553286,
+          "mean_us": 37.09422039473684,
+          "max_registers": 119,
+          "percent": 0.36044339339328113
+        },
+        {
+          "name": "k_get_rows_float",
+          "calls": 4153,
+          "ms": 16.969243,
+          "mean_us": 4.086020467132194,
+          "max_registers": 40,
+          "percent": 0.27120001627413326
+        },
+        {
+          "name": "ssm_conv_f32",
+          "calls": 3696,
+          "ms": 16.699751,
+          "mean_us": 4.518330898268398,
+          "max_registers": 46,
+          "percent": 0.2668930336476396
+        },
+        {
+          "name": "unary_op_kernel",
+          "calls": 7392,
+          "ms": 9.243252,
+          "mean_us": 1.2504399350649351,
+          "max_registers": 9,
+          "percent": 0.14772433235978263
+        },
+        {
+          "name": "rope_multi",
+          "calls": 3076,
+          "ms": 8.329012,
+          "mean_us": 2.7077412223667103,
+          "max_registers": 20,
+          "percent": 0.1331130793487636
+        },
+        {
+          "name": "k_set_rows",
+          "calls": 3076,
+          "ms": 6.50659,
+          "mean_us": 2.11527633289987,
+          "max_registers": 24,
+          "percent": 0.10398739141687775
+        },
+        {
+          "name": "flash_attn_combine_results",
+          "calls": 1538,
+          "ms": 5.071454,
+          "mean_us": 3.29743433029909,
+          "max_registers": 30,
+          "percent": 0.08105125298361973
+        },
+        {
+          "name": "pad_f32",
+          "calls": 152,
+          "ms": 2.819034,
+          "mean_us": 18.546276315789473,
+          "max_registers": 32,
+          "percent": 0.04505339847377605
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "calls": 152,
+          "ms": 1.533166,
+          "mean_us": 10.086618421052632,
+          "max_registers": 64,
+          "percent": 0.024502839882188487
+        },
+        {
+          "name": "quantize_mmq_q8_1",
+          "calls": 256,
+          "ms": 1.123403,
+          "mean_us": 4.38829296875,
+          "max_registers": 27,
+          "percent": 0.017954066182116087
+        },
+        {
+          "name": "concat_cont",
+          "calls": 306,
+          "ms": 1.001127,
+          "mean_us": 3.2716568627450977,
+          "max_registers": 38,
+          "percent": 0.01599986862657776
+        },
+        {
+          "name": "init_indices",
+          "calls": 152,
+          "ms": 0.703243,
+          "mean_us": 4.626598684210527,
+          "max_registers": 8,
+          "percent": 0.011239129114048887
+        },
+        {
+          "name": "scale_f32",
+          "calls": 48,
+          "ms": 0.506218,
+          "mean_us": 10.546208333333334,
+          "max_registers": 21,
+          "percent": 0.008090303724111864
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "calls": 152,
+          "ms": 0.278304,
+          "mean_us": 1.8309473684210527,
+          "max_registers": 18,
+          "percent": 0.004447814751026689
+        },
+        {
+          "name": "init_offsets",
+          "calls": 152,
+          "ms": 0.199328,
+          "mean_us": 1.3113684210526317,
+          "max_registers": 8,
+          "percent": 0.003185631606777653
+        }
+      ]
+    },
+    {
+      "phase": "pascal/prefill8192",
+      "wall_ms": 14724.357184,
+      "kernel_ms": 14351.018614999999,
+      "kernels": [
+        {
+          "name": "mul_mat_q",
+          "calls": 8192,
+          "ms": 10646.67045,
+          "mean_us": 1299.6423889160155,
+          "max_registers": 119,
+          "percent": 74.18755933374558
+        },
+        {
+          "name": "flash_attn_tile",
+          "calls": 297,
+          "ms": 1741.218382,
+          "mean_us": 5862.688154882155,
+          "max_registers": 128,
+          "percent": 12.133064758065608
+        },
+        {
+          "name": "gated_delta_net_cuda",
+          "calls": 792,
+          "ms": 808.472668,
+          "mean_us": 1020.7988232323232,
+          "max_registers": 54,
+          "percent": 5.633555984346412
+        },
+        {
+          "name": "quantize_mmq_q8_1",
+          "calls": 8192,
+          "ms": 245.084085,
+          "mean_us": 29.91749084472656,
+          "max_registers": 27,
+          "percent": 1.7077818068177593
+        },
+        {
+          "name": "unary_gated_op_kernel",
+          "calls": 2178,
+          "ms": 202.704897,
+          "mean_us": 93.06928236914601,
+          "max_registers": 24,
+          "percent": 1.412477416677088
+        },
+        {
+          "name": "rms_norm_f32",
+          "calls": 3696,
+          "ms": 198.107344,
+          "mean_us": 53.60047186147186,
+          "max_registers": 31,
+          "percent": 1.3804409938743571
+        },
+        {
+          "name": "concat_non_cont",
+          "calls": 792,
+          "ms": 110.086328,
+          "mean_us": 138.99788888888887,
+          "max_registers": 30,
+          "percent": 0.7670976601266154
+        },
+        {
+          "name": "k_bin_bcast",
+          "calls": 3762,
+          "ms": 107.700243,
+          "mean_us": 28.628453748006383,
+          "max_registers": 23,
+          "percent": 0.7504710703073673
+        },
+        {
+          "name": "ssm_conv_long_token_f32",
+          "calls": 768,
+          "ms": 98.476835,
+          "mean_us": 128.22504557291668,
+          "max_registers": 40,
+          "percent": 0.6862010122199259
+        },
+        {
+          "name": "cpy_scalar",
+          "calls": 1881,
+          "ms": 52.140925,
+          "mean_us": 27.71979000531632,
+          "max_registers": 31,
+          "percent": 0.36332560356030175
+        },
+        {
+          "name": "mul_mat_vec_q",
+          "calls": 257,
+          "ms": 40.411467,
+          "mean_us": 157.2430622568093,
+          "max_registers": 95,
+          "percent": 0.28159302195985625
+        },
+        {
+          "name": "l2_norm_f32",
+          "calls": 1584,
+          "ms": 31.446647,
+          "mean_us": 19.852681186868686,
+          "max_registers": 30,
+          "percent": 0.21912484293715065
+        },
+        {
+          "name": "flash_attn_combine_results",
+          "calls": 297,
+          "ms": 21.728433,
+          "mean_us": 73.15970707070707,
+          "max_registers": 30,
+          "percent": 0.15140690415723498
+        },
+        {
+          "name": "k_get_rows_float_vec",
+          "calls": 792,
+          "ms": 15.167997,
+          "mean_us": 19.151511363636363,
+          "max_registers": 40,
+          "percent": 0.10569282506641081
+        },
+        {
+          "name": "rope_multi",
+          "calls": 594,
+          "ms": 11.662924,
+          "mean_us": 19.63455218855219,
+          "max_registers": 20,
+          "percent": 0.08126896294183367
+        },
+        {
+          "name": "k_set_rows",
+          "calls": 594,
+          "ms": 8.773594,
+          "mean_us": 14.77036026936027,
+          "max_registers": 24,
+          "percent": 0.06113568824187606
+        },
+        {
+          "name": "concat_cont",
+          "calls": 33,
+          "ms": 4.084327,
+          "mean_us": 123.76748484848484,
+          "max_registers": 38,
+          "percent": 0.028460188851897748
+        },
+        {
+          "name": "k_get_rows_float",
+          "calls": 793,
+          "ms": 3.679643,
+          "mean_us": 4.640155107187894,
+          "max_registers": 40,
+          "percent": 0.025640291457457637
+        },
+        {
+          "name": "unary_op_kernel",
+          "calls": 1584,
+          "ms": 2.14833,
+          "mean_us": 1.3562689393939396,
+          "max_registers": 9,
+          "percent": 0.014969878150353165
+        },
+        {
+          "name": "quantize_q8_1",
+          "calls": 257,
+          "ms": 0.597504,
+          "mean_us": 2.3249182879377432,
+          "max_registers": 23,
+          "percent": 0.004163495400775773
+        },
+        {
+          "name": "scale_f32",
+          "calls": 48,
+          "ms": 0.530184,
+          "mean_us": 11.0455,
+          "max_registers": 21,
+          "percent": 0.003694399779022236
+        },
+        {
+          "name": "ssm_conv_f32",
+          "calls": 24,
+          "ms": 0.125408,
+          "mean_us": 5.225333333333333,
+          "max_registers": 46,
+          "percent": 0.0008738613151049835
+        }
+      ]
+    },
+    {
+      "phase": "pascal/decode8192",
+      "wall_ms": 2970.164631,
+      "kernel_ms": 2752.5445640000003,
+      "kernels": [
+        {
+          "name": "mul_mat_vec_q",
+          "calls": 17176,
+          "ms": 2325.991179,
+          "mean_us": 135.42100483232417,
+          "max_registers": 95,
+          "percent": 84.5033068463701
+        },
+        {
+          "name": "flash_attn_tile",
+          "calls": 648,
+          "ms": 132.817363,
+          "mean_us": 204.9650663580247,
+          "max_registers": 168,
+          "percent": 4.8252574994458834
+        },
+        {
+          "name": "concat_non_cont",
+          "calls": 1536,
+          "ms": 54.221042,
+          "mean_us": 35.300157552083334,
+          "max_registers": 30,
+          "percent": 1.9698515587775238
+        },
+        {
+          "name": "gated_delta_net_cuda",
+          "calls": 1560,
+          "ms": 42.996282,
+          "mean_us": 27.56171923076923,
+          "max_registers": 54,
+          "percent": 1.5620557996531677
+        },
+        {
+          "name": "rms_norm_f32",
+          "calls": 7721,
+          "ms": 34.532984,
+          "mean_us": 4.472605102965938,
+          "max_registers": 31,
+          "percent": 1.2545840111600821
+        },
+        {
+          "name": "quantize_q8_1",
+          "calls": 17176,
+          "ms": 30.917185,
+          "mean_us": 1.8000224149976711,
+          "max_registers": 23,
+          "percent": 1.1232219599406275
+        },
+        {
+          "name": "k_get_rows_float_vec",
+          "calls": 1560,
+          "ms": 27.942312,
+          "mean_us": 17.911738461538462,
+          "max_registers": 40,
+          "percent": 1.0151447633383348
+        },
+        {
+          "name": "k_bin_bcast",
+          "calls": 7344,
+          "ms": 21.698578,
+          "mean_us": 2.9545994008714596,
+          "max_registers": 23,
+          "percent": 0.7883097801136999
+        },
+        {
+          "name": "cpy_scalar",
+          "calls": 3768,
+          "ms": 20.693053,
+          "mean_us": 5.491786889596603,
+          "max_registers": 31,
+          "percent": 0.7517790364101803
+        },
+        {
+          "name": "unary_gated_op_kernel",
+          "calls": 4344,
+          "ms": 11.043015,
+          "mean_us": 2.542130524861878,
+          "max_registers": 24,
+          "percent": 0.4011929595774566
+        },
+        {
+          "name": "l2_norm_f32",
+          "calls": 3120,
+          "ms": 10.413409,
+          "mean_us": 3.3376310897435895,
+          "max_registers": 30,
+          "percent": 0.37831936079055606
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "calls": 252,
+          "ms": 9.439552,
+          "mean_us": 37.45853968253968,
+          "max_registers": 119,
+          "percent": 0.3429391161711996
+        },
+        {
+          "name": "k_get_rows_float",
+          "calls": 1751,
+          "ms": 7.234645,
+          "mean_us": 4.131721873215305,
+          "max_registers": 40,
+          "percent": 0.2628348000108891
+        },
+        {
+          "name": "ssm_conv_f32",
+          "calls": 1560,
+          "ms": 6.954492,
+          "mean_us": 4.458007692307692,
+          "max_registers": 46,
+          "percent": 0.2526568358222592
+        },
+        {
+          "name": "unary_op_kernel",
+          "calls": 3096,
+          "ms": 3.925681,
+          "mean_us": 1.2679848191214471,
+          "max_registers": 9,
+          "percent": 0.14262007058280637
+        },
+        {
+          "name": "rope_multi",
+          "calls": 1296,
+          "ms": 3.541292,
+          "mean_us": 2.7324783950617286,
+          "max_registers": 20,
+          "percent": 0.1286552103938979
+        },
+        {
+          "name": "k_set_rows",
+          "calls": 1296,
+          "ms": 2.778335,
+          "mean_us": 2.1437770061728396,
+          "max_registers": 24,
+          "percent": 0.10093696706448674
+        },
+        {
+          "name": "flash_attn_combine_results",
+          "calls": 648,
+          "ms": 2.541803,
+          "mean_us": 3.9225354938271604,
+          "max_registers": 30,
+          "percent": 0.09234375469315743
+        },
+        {
+          "name": "pad_f32",
+          "calls": 63,
+          "ms": 1.18609,
+          "mean_us": 18.826825396825395,
+          "max_registers": 32,
+          "percent": 0.04309067382641657
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "calls": 63,
+          "ms": 0.646728,
+          "mean_us": 10.26552380952381,
+          "max_registers": 64,
+          "percent": 0.02349564139518142
+        },
+        {
+          "name": "concat_cont",
+          "calls": 152,
+          "ms": 0.536898,
+          "mean_us": 3.532223684210526,
+          "max_registers": 38,
+          "percent": 0.019505515261114586
+        },
+        {
+          "name": "init_indices",
+          "calls": 63,
+          "ms": 0.29904,
+          "mean_us": 4.746666666666667,
+          "max_registers": 8,
+          "percent": 0.010864129282812947
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "calls": 63,
+          "ms": 0.110915,
+          "mean_us": 1.7605555555555557,
+          "max_registers": 18,
+          "percent": 0.0040295442061369655
+        },
+        {
+          "name": "init_offsets",
+          "calls": 63,
+          "ms": 0.082691,
+          "mean_us": 1.3125555555555557,
+          "max_registers": 8,
+          "percent": 0.0030041657120287767
+        }
+      ]
+    }
+  ],
+  "q6_exhaustive": {
+    "returncode": 0,
+    "output": "PASS: all 16,777,216 packed Q6 combinations\n",
+    "combinations": 16777216
+  }
+}

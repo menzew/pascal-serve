@@ -1,0 +1,359 @@
+{
+  "status": "ok",
+  "rows": [
+    {
+      "profile": "baseline",
+      "engine": {
+        "executable": "$PROJECT/.pascal/build-cuda61/bin/test-backend-ops",
+        "sha256": "a5c5b9f2c707070adbc57270a89f51cd5e7e41b20856ebad6f0e820e9ef81de3",
+        "build_manifest": {
+          "schema_version": 1,
+          "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "kernels": "baseline",
+          "patch": null,
+          "cpu": false,
+          "compiler": "/usr/local/cuda-12.6/bin/nvcc",
+          "cuda_version": "release 12.6",
+          "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+          "built_at": "2026-09-07T09:37:09.994531+00:00",
+          "cmake_version": "cmake version 3.28.3",
+          "configure": [
+            "cmake",
+            "-S",
+            "$PROJECT/.pascal/source",
+            "-B",
+            "$PROJECT/.pascal/build-cuda61",
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DBUILD_SHARED_LIBS=OFF",
+            "-DGGML_NATIVE=OFF",
+            "-DLLAMA_BUILD_TESTS=ON",
+            "-DLLAMA_BUILD_EXAMPLES=OFF",
+            "-DLLAMA_BUILD_APP=OFF",
+            "-DLLAMA_BUILD_UI=OFF",
+            "-DLLAMA_USE_PREBUILT_UI=OFF",
+            "-DLLAMA_OPENSSL=OFF",
+            "-DLLAMA_BUILD_SERVER=ON",
+            "-DLLAMA_BUILD_TOOLS=ON",
+            "-DGGML_METAL=OFF",
+            "-DGGML_CUDA=ON",
+            "-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.6/bin/nvcc",
+            "-DCUDAToolkit_ROOT=/usr/local/cuda-12.6",
+            "-DCMAKE_CUDA_ARCHITECTURES=61",
+            "-DGGML_CUDA_FORCE_MMQ=ON",
+            "-DGGML_CUDA_FA=ON",
+            "-DGGML_CUDA_FA_ALL_QUANTS=OFF",
+            "-DGGML_CUDA_GRAPHS=OFF"
+          ],
+          "executable": "$PROJECT/.pascal/build-cuda61/bin/llama-server",
+          "binaries": {
+            "llama-server": {
+              "sha256": "23b648d465e710a7bb747ad6129e7ca3fd55ec7c05848959aaf1bcfa45808091",
+              "bytes": 117073120
+            },
+            "llama-bench": {
+              "sha256": "f3ce8324c13b11a912a48a7aeefbcf3f6117aee846e309e3522f4a26120d18c5",
+              "bytes": 113612240
+            },
+            "test-backend-ops": {
+              "sha256": "a5c5b9f2c707070adbc57270a89f51cd5e7e41b20856ebad6f0e820e9ef81de3",
+              "bytes": 105500120
+            },
+            "llama-perplexity": {
+              "sha256": "317e0480f85319def36ee307328dc9c37b580baac98acb2e6ccf3cc638e738b1",
+              "bytes": 113520952
+            }
+          }
+        },
+        "manifest_verified": true
+      },
+      "samples": [
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 287.39
+        },
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 287.81
+        }
+      ]
+    },
+    {
+      "profile": "pascal",
+      "engine": {
+        "executable": "$PROJECT/.pascal/build-cuda61-pascal/bin/test-backend-ops",
+        "sha256": "eef72955b669c048f2ff2f686a7d0303e11261ca12840c037a29441097fbd7fc",
+        "build_manifest": {
+          "schema_version": 1,
+          "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "kernels": "pascal",
+          "patch": {
+            "schema_version": 1,
+            "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+            "patch": "pascal-q6-unpack.patch",
+            "sha256": "bf2f763cfe00a07120e6bd9cc11160d75ab8d649f9716539a1351a2a5040dd83",
+            "files": {
+              "ggml/src/ggml-cuda/vecdotq.cuh": {
+                "before": "5999bbc5cf24c070029183c075a66f3cb6aa4a9b57798e138b4610b45a704539",
+                "after": "5d7d4dfcac567ea5b85317b5621a9ba73afaf9fc98596cec0fd9c9134ae6cbb5"
+              }
+            },
+            "scope": "NVIDIA Pascal DP4A Q6_K matrix-vector unpacking; other paths unchanged"
+          },
+          "cpu": false,
+          "compiler": "/usr/local/cuda-12.6/bin/nvcc",
+          "cuda_version": "release 12.6",
+          "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+          "built_at": "2026-09-07T09:47:29.490444+00:00",
+          "cmake_version": "cmake version 3.28.3",
+          "configure": [
+            "cmake",
+            "-S",
+            "$PROJECT/.pascal/source-pascal",
+            "-B",
+            "$PROJECT/.pascal/build-cuda61-pascal",
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DBUILD_SHARED_LIBS=OFF",
+            "-DGGML_NATIVE=OFF",
+            "-DLLAMA_BUILD_TESTS=ON",
+            "-DLLAMA_BUILD_EXAMPLES=OFF",
+            "-DLLAMA_BUILD_APP=OFF",
+            "-DLLAMA_BUILD_UI=OFF",
+            "-DLLAMA_USE_PREBUILT_UI=OFF",
+            "-DLLAMA_OPENSSL=OFF",
+            "-DLLAMA_BUILD_SERVER=ON",
+            "-DLLAMA_BUILD_TOOLS=ON",
+            "-DGGML_METAL=OFF",
+            "-DGGML_CUDA=ON",
+            "-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.6/bin/nvcc",
+            "-DCUDAToolkit_ROOT=/usr/local/cuda-12.6",
+            "-DCMAKE_CUDA_ARCHITECTURES=61",
+            "-DGGML_CUDA_FORCE_MMQ=ON",
+            "-DGGML_CUDA_FA=ON",
+            "-DGGML_CUDA_FA_ALL_QUANTS=OFF",
+            "-DGGML_CUDA_GRAPHS=OFF"
+          ],
+          "executable": "$PROJECT/.pascal/build-cuda61-pascal/bin/llama-server",
+          "binaries": {
+            "llama-server": {
+              "sha256": "cba02e853c908baca923cddcf5ac3f253175cda9911c282549c5c91372decbef",
+              "bytes": 117060832
+            },
+            "llama-bench": {
+              "sha256": "7c06dcbd807f83c93128fdbbc8f1402ba3dd88aa40700ac98e0b4b14c0a10b65",
+              "bytes": 113604048
+            },
+            "test-backend-ops": {
+              "sha256": "eef72955b669c048f2ff2f686a7d0303e11261ca12840c037a29441097fbd7fc",
+              "bytes": 105487832
+            },
+            "llama-perplexity": {
+              "sha256": "2df3e61597bf92c4cba1bd99c8fba05eb85baefea6900a7d6756050eaffc611b",
+              "bytes": 113512760
+            }
+          }
+        },
+        "manifest_verified": true
+      },
+      "samples": [
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 274.58
+        },
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 279.63
+        }
+      ]
+    },
+    {
+      "profile": "baseline",
+      "engine": {
+        "executable": "$PROJECT/.pascal/build-cuda61/bin/test-backend-ops",
+        "sha256": "a5c5b9f2c707070adbc57270a89f51cd5e7e41b20856ebad6f0e820e9ef81de3",
+        "build_manifest": {
+          "schema_version": 1,
+          "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "kernels": "baseline",
+          "patch": null,
+          "cpu": false,
+          "compiler": "/usr/local/cuda-12.6/bin/nvcc",
+          "cuda_version": "release 12.6",
+          "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+          "built_at": "2026-09-07T09:37:09.994531+00:00",
+          "cmake_version": "cmake version 3.28.3",
+          "configure": [
+            "cmake",
+            "-S",
+            "$PROJECT/.pascal/source",
+            "-B",
+            "$PROJECT/.pascal/build-cuda61",
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DBUILD_SHARED_LIBS=OFF",
+            "-DGGML_NATIVE=OFF",
+            "-DLLAMA_BUILD_TESTS=ON",
+            "-DLLAMA_BUILD_EXAMPLES=OFF",
+            "-DLLAMA_BUILD_APP=OFF",
+            "-DLLAMA_BUILD_UI=OFF",
+            "-DLLAMA_USE_PREBUILT_UI=OFF",
+            "-DLLAMA_OPENSSL=OFF",
+            "-DLLAMA_BUILD_SERVER=ON",
+            "-DLLAMA_BUILD_TOOLS=ON",
+            "-DGGML_METAL=OFF",
+            "-DGGML_CUDA=ON",
+            "-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.6/bin/nvcc",
+            "-DCUDAToolkit_ROOT=/usr/local/cuda-12.6",
+            "-DCMAKE_CUDA_ARCHITECTURES=61",
+            "-DGGML_CUDA_FORCE_MMQ=ON",
+            "-DGGML_CUDA_FA=ON",
+            "-DGGML_CUDA_FA_ALL_QUANTS=OFF",
+            "-DGGML_CUDA_GRAPHS=OFF"
+          ],
+          "executable": "$PROJECT/.pascal/build-cuda61/bin/llama-server",
+          "binaries": {
+            "llama-server": {
+              "sha256": "23b648d465e710a7bb747ad6129e7ca3fd55ec7c05848959aaf1bcfa45808091",
+              "bytes": 117073120
+            },
+            "llama-bench": {
+              "sha256": "f3ce8324c13b11a912a48a7aeefbcf3f6117aee846e309e3522f4a26120d18c5",
+              "bytes": 113612240
+            },
+            "test-backend-ops": {
+              "sha256": "a5c5b9f2c707070adbc57270a89f51cd5e7e41b20856ebad6f0e820e9ef81de3",
+              "bytes": 105500120
+            },
+            "llama-perplexity": {
+              "sha256": "317e0480f85319def36ee307328dc9c37b580baac98acb2e6ccf3cc638e738b1",
+              "bytes": 113520952
+            }
+          }
+        },
+        "manifest_verified": true
+      },
+      "samples": [
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=1,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 287.88
+        },
+        {
+          "params": "type_a=q6_K,type_b=f32,m=4096,n=2,k=14336,bs=[1,1],nr=[1,1],per=[0,1,2,3],k_v=0,o=1,src_overlap=0",
+          "us": 288.42
+        }
+      ]
+    }
+  ],
+  "restart_returncode": 0,
+  "service_model": "$PROJECT/models/Qwen3.8-9B-Q4_K_M.gguf",
+  "context": 32768,
+  "runtime": {
+    "pid": 692707,
+    "configured_source_pin": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+    "engine_version": "version: 0.4.0-dev (build 1, commit 73a43d1)\nbuilt with GNU 13.3.0 for Linux x86_64",
+    "engine": {
+      "executable": "$PROJECT/.pascal/build-cuda61-pascal/bin/llama-server",
+      "sha256": "cba02e853c908baca923cddcf5ac3f253175cda9911c282549c5c91372decbef",
+      "build_manifest": {
+        "schema_version": 1,
+        "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+        "kernels": "pascal",
+        "patch": {
+          "schema_version": 1,
+          "llama_commit": "73a43d1f69345aee8bb186ef4b3172cef892f2e5",
+          "patch": "pascal-q6-unpack.patch",
+          "sha256": "bf2f763cfe00a07120e6bd9cc11160d75ab8d649f9716539a1351a2a5040dd83",
+          "files": {
+            "ggml/src/ggml-cuda/vecdotq.cuh": {
+              "before": "5999bbc5cf24c070029183c075a66f3cb6aa4a9b57798e138b4610b45a704539",
+              "after": "5d7d4dfcac567ea5b85317b5621a9ba73afaf9fc98596cec0fd9c9134ae6cbb5"
+            }
+          },
+          "scope": "NVIDIA Pascal DP4A Q6_K matrix-vector unpacking; other paths unchanged"
+        },
+        "cpu": false,
+        "compiler": "/usr/local/cuda-12.6/bin/nvcc",
+        "cuda_version": "release 12.6",
+        "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+        "built_at": "2026-09-07T09:47:29.490444+00:00",
+        "cmake_version": "cmake version 3.28.3",
+        "configure": [
+          "cmake",
+          "-S",
+          "$PROJECT/.pascal/source-pascal",
+          "-B",
+          "$PROJECT/.pascal/build-cuda61-pascal",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DBUILD_SHARED_LIBS=OFF",
+          "-DGGML_NATIVE=OFF",
+          "-DLLAMA_BUILD_TESTS=ON",
+          "-DLLAMA_BUILD_EXAMPLES=OFF",
+          "-DLLAMA_BUILD_APP=OFF",
+          "-DLLAMA_BUILD_UI=OFF",
+          "-DLLAMA_USE_PREBUILT_UI=OFF",
+          "-DLLAMA_OPENSSL=OFF",
+          "-DLLAMA_BUILD_SERVER=ON",
+          "-DLLAMA_BUILD_TOOLS=ON",
+          "-DGGML_METAL=OFF",
+          "-DGGML_CUDA=ON",
+          "-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.6/bin/nvcc",
+          "-DCUDAToolkit_ROOT=/usr/local/cuda-12.6",
+          "-DCMAKE_CUDA_ARCHITECTURES=61",
+          "-DGGML_CUDA_FORCE_MMQ=ON",
+          "-DGGML_CUDA_FA=ON",
+          "-DGGML_CUDA_FA_ALL_QUANTS=OFF",
+          "-DGGML_CUDA_GRAPHS=OFF"
+        ],
+        "executable": "$PROJECT/.pascal/build-cuda61-pascal/bin/llama-server",
+        "binaries": {
+          "llama-server": {
+            "sha256": "cba02e853c908baca923cddcf5ac3f253175cda9911c282549c5c91372decbef",
+            "bytes": 117060832
+          },
+          "llama-bench": {
+            "sha256": "7c06dcbd807f83c93128fdbbc8f1402ba3dd88aa40700ac98e0b4b14c0a10b65",
+            "bytes": 113604048
+          },
+          "test-backend-ops": {
+            "sha256": "eef72955b669c048f2ff2f686a7d0303e11261ca12840c037a29441097fbd7fc",
+            "bytes": 105487832
+          },
+          "llama-perplexity": {
+            "sha256": "2df3e61597bf92c4cba1bd99c8fba05eb85baefea6900a7d6756050eaffc611b",
+            "bytes": 113512760
+          }
+        }
+      },
+      "manifest_verified": true
+    },
+    "requested_kernels": "pascal",
+    "model": "$PROJECT/models/Qwen3.8-9B-Q4_K_M.gguf",
+    "device": {
+      "index": "0",
+      "name": "NVIDIA GeForce GTX 1080",
+      "compute_cap": "6.1",
+      "total_mib": 8192,
+      "free_mib": 7803,
+      "driver": "570.211.01"
+    },
+    "context": 32768,
+    "reserve_mib": 768,
+    "gpu_layers": [
+      34,
+      34
+    ],
+    "flash_attention": true,
+    "kv_cache": "f16",
+    "batch": 1024,
+    "ubatch": 256,
+    "cache_ram_mib": 512,
+    "checkpoints": 4,
+    "mtp_draft_tokens": 1,
+    "mtp_active": true,
+    "log": "$PROJECT/.pascal/logs/server-1788774766841956281-0.log",
+    "port": 8080
+  },
+  "comment_rebuild": {
+    "status": "ok",
+    "returncode": 0,
+    "identical_binaries": true
+  }
+}

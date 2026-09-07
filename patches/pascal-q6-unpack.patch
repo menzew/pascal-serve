@@ -1,0 +1,17 @@
+--- a/ggml/src/ggml-cuda/vecdotq.cuh
++++ b/ggml/src/ggml-cuda/vecdotq.cuh
+@@ -638,7 +638,13 @@
+ 
+         const int vih = ((vh >> (4*i)) << 4) & 0x30303030;
+ 
+-        const int vi = __vsubss4((vil | vih), 0x20202020); // vi = (vil | vih) - 32
++#if defined(__CUDA_ARCH__) && __CUDA_ARCH__ >= GGML_CUDA_CC_DP4A && __CUDA_ARCH__ < GGML_CUDA_CC_VOLTA
++        // Each byte is in [0, 63]. Setting bit 7 prevents cross-byte borrows;
++        // toggling it after subtraction gives the signed Q6 value in [-32, 31].
++        const int vi = int(((uint32_t(vil | vih) | 0x80808080u) - 0x20202020u) ^ 0x80808080u);
++#else
++        const int vi = __vsubss4((vil | vih), 0x20202020);
++#endif
+ 
+         sumf += d8[i] * (ggml_cuda_dp4a(vi, u[i], 0) * sc); // SIMD dot product
+     }

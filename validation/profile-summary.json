@@ -1,0 +1,824 @@
+{
+  "phases": [
+    {
+      "name": "pascal/prefill",
+      "wall_ms": 15827.560741,
+      "summed_kernel_ms": 15475.23049,
+      "kernels": [
+        {
+          "name": "void mul_mat_q<(ggml_type)12, (int)64, (bool)0>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 5568,
+          "gpu_ms": 9100.065559,
+          "share_percent": 58.80407122130043,
+          "max_registers": 113
+        },
+        {
+          "name": "void mul_mat_q<(ggml_type)14, (int)64, (bool)0>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 1088,
+          "gpu_ms": 2231.538941,
+          "share_percent": 14.420069170808196,
+          "max_registers": 115
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)32, (int)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 288,
+          "gpu_ms": 1870.838406,
+          "share_percent": 12.089244210022748,
+          "max_registers": 128
+        },
+        {
+          "name": "void gated_delta_net_cuda<(int)128, (bool)0, (bool)1>(const float *, const float *, const float *, const float *, const float *, const float *, float *, float *, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, float, long, int)",
+          "calls": 792,
+          "gpu_ms": 872.746918,
+          "share_percent": 5.639637603872613,
+          "max_registers": 54
+        },
+        {
+          "name": "void quantize_mmq_q8_1<(mmq_q8_1_ds_layout)1, (bool)0>(const float *, const int *, void *, long, long, long, long, long, int, int, int)",
+          "calls": 7104,
+          "gpu_ms": 211.008411,
+          "share_percent": 1.3635235425821435,
+          "max_registers": 27
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_silu, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 1881,
+          "gpu_ms": 203.805595,
+          "share_percent": 1.3169793828382585,
+          "max_registers": 24
+        },
+        {
+          "name": "void mul_mat_q<(ggml_type)12, (int)64, (bool)1>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 1536,
+          "gpu_ms": 169.445089,
+          "share_percent": 1.0949438789263553,
+          "max_registers": 119
+        },
+        {
+          "name": "void rms_norm_f32<(int)256, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 1386,
+          "gpu_ms": 116.415145,
+          "share_percent": 0.7522675999897175,
+          "max_registers": 30
+        },
+        {
+          "name": "void k_bin_bcast<&op_add, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 2970,
+          "gpu_ms": 113.884596,
+          "share_percent": 0.7359153459691055,
+          "max_registers": 23
+        },
+        {
+          "name": "void concat_non_cont<unsigned int, (int)0>(const char *, const char *, char *, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 792,
+          "gpu_ms": 104.3026,
+          "share_percent": 0.6739970694937287,
+          "max_registers": 30
+        },
+        {
+          "name": "void ssm_conv_long_token_f32<(bool)1, (unsigned long)128, (unsigned long)4, (long)32>(const float *, const float *, const float *, int, int, int, int, float *, int, int, int, long)",
+          "calls": 768,
+          "gpu_ms": 102.206099,
+          "share_percent": 0.6604496073001624,
+          "max_registers": 40
+        },
+        {
+          "name": "void rms_norm_f32<(int)1024, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 2310,
+          "gpu_ms": 97.113032,
+          "share_percent": 0.6275385175216217,
+          "max_registers": 31
+        },
+        {
+          "name": "void cpy_scalar<&cpy_1_scalar<float, float>>(const char *, char *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+          "calls": 1881,
+          "gpu_ms": 55.809996,
+          "share_percent": 0.3606408061971295,
+          "max_registers": 31
+        },
+        {
+          "name": "void quantize_mmq_q8_1<(mmq_q8_1_ds_layout)0, (bool)0>(const float *, const int *, void *, long, long, long, long, long, int, int, int)",
+          "calls": 1088,
+          "gpu_ms": 54.304851,
+          "share_percent": 0.35091465057720117,
+          "max_registers": 27
+        },
+        {
+          "name": "void l2_norm_f32<(int)32>(const float *, float *, int, long, long, long, float)",
+          "calls": 1584,
+          "gpu_ms": 33.597177,
+          "share_percent": 0.2171029182519142,
+          "max_registers": 30
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 222,
+          "gpu_ms": 31.395056,
+          "share_percent": 0.20287294603002712,
+          "max_registers": 95
+        },
+        {
+          "name": "void flash_attn_combine_results<(int)256>(const float *, const float2 *, float *, int)",
+          "calls": 297,
+          "gpu_ms": 23.426052,
+          "share_percent": 0.15137772594170906,
+          "max_registers": 30
+        },
+        {
+          "name": "void k_get_rows_float_vec<float>(const T1 *, const int *, T1 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 792,
+          "gpu_ms": 16.225887,
+          "share_percent": 0.10485069679889465,
+          "max_registers": 40
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_sigmoid, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 297,
+          "gpu_ms": 15.472412,
+          "share_percent": 0.0999817870887169,
+          "max_registers": 22
+        },
+        {
+          "name": "void rope_multi<(bool)1, (bool)0, float>(const T3 *, T3 *, int, int, int, int, int, int, int, int, int, int, int, const int *, float, float, float, rope_corr_dims, float, const float *, mrope_sections, bool, bool)",
+          "calls": 594,
+          "gpu_ms": 12.556638,
+          "share_percent": 0.08114023250325107,
+          "max_registers": 20
+        },
+        {
+          "name": "void k_set_rows<float, long, __half>(const T1 *, const T2 *, T3 *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, uint3, uint3, uint3)",
+          "calls": 594,
+          "gpu_ms": 9.447196,
+          "share_percent": 0.06104720705843264,
+          "max_registers": 24
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 34,
+          "gpu_ms": 7.766636,
+          "share_percent": 0.05018753035710036,
+          "max_registers": 88
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)1, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 1,
+          "gpu_ms": 4.86632,
+          "share_percent": 0.03144586442925413,
+          "max_registers": 56
+        },
+        {
+          "name": "void concat_cont<unsigned int, (int)0>(const T1 *, const T1 *, T1 *, long, long, long, long, long, long)",
+          "calls": 33,
+          "gpu_ms": 4.402731,
+          "share_percent": 0.028450180453499663,
+          "max_registers": 38
+        },
+        {
+          "name": "void k_get_rows_float<float, float>(const T1 *, const int *, T2 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 793,
+          "gpu_ms": 3.85012,
+          "share_percent": 0.02487924171784016,
+          "max_registers": 40
+        },
+        {
+          "name": "void k_bin_bcast<&op_mul, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 792,
+          "gpu_ms": 2.554284,
+          "share_percent": 0.016505628149774975,
+          "max_registers": 23
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)4, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 9,
+          "gpu_ms": 2.492026,
+          "share_percent": 0.016103320733156977,
+          "max_registers": 124
+        },
+        {
+          "name": "void unary_op_kernel<&op_sigmoid, float>(const T2 *, T2 *, int)",
+          "calls": 792,
+          "gpu_ms": 1.268846,
+          "share_percent": 0.008199205826497516,
+          "max_registers": 8
+        },
+        {
+          "name": "void unary_op_kernel<&op_softplus, float>(const T2 *, T2 *, int)",
+          "calls": 792,
+          "gpu_ms": 1.122221,
+          "share_percent": 0.007251723977391952,
+          "max_registers": 9
+        },
+        {
+          "name": "quantize_q8_1(const float *, void *, long, long, long, long, long, unsigned int, uint3)",
+          "calls": 257,
+          "gpu_ms": 0.611758,
+          "share_percent": 0.003953143059131263,
+          "max_registers": 23
+        },
+        {
+          "name": "scale_f32(const float *, float *, float, float, long)",
+          "calls": 48,
+          "gpu_ms": 0.560994,
+          "share_percent": 0.003625109172768127,
+          "max_registers": 21
+        },
+        {
+          "name": "void ssm_conv_f32<(bool)1, (unsigned long)128, (unsigned long)4>(const float *, const float *, const float *, int, int, int, int, float *, int, int, int, long)",
+          "calls": 24,
+          "gpu_ms": 0.128898,
+          "share_percent": 0.0008329310512259775,
+          "max_registers": 46
+        }
+      ]
+    },
+    {
+      "name": "pascal/decode",
+      "wall_ms": 3211.417917,
+      "summed_kernel_ms": 2996.557653,
+      "kernels": [
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)2, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 13986,
+          "gpu_ms": 1366.270204,
+          "share_percent": 45.59465767769094,
+          "max_registers": 71
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)2, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 2205,
+          "gpu_ms": 721.204827,
+          "share_percent": 24.06777744716397,
+          "max_registers": 72
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)1, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 145,
+          "gpu_ms": 323.741518,
+          "share_percent": 10.80378072071754,
+          "max_registers": 56
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)2, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 567,
+          "gpu_ms": 131.157243,
+          "share_percent": 4.376930404415616,
+          "max_registers": 128
+        },
+        {
+          "name": "void concat_non_cont<unsigned int, (int)0>(const char *, const char *, char *, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 1536,
+          "gpu_ms": 61.393251,
+          "share_percent": 2.048792585002869,
+          "max_registers": 30
+        },
+        {
+          "name": "void gated_delta_net_cuda<(int)128, (bool)0, (bool)1>(const float *, const float *, const float *, const float *, const float *, const float *, float *, float *, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, float, long, int)",
+          "calls": 1560,
+          "gpu_ms": 46.890039,
+          "share_percent": 1.564796824551535,
+          "max_registers": 54
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)1, (bool)1, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 184,
+          "gpu_ms": 37.617487,
+          "share_percent": 1.2553566911131944,
+          "max_registers": 48
+        },
+        {
+          "name": "quantize_q8_1(const float *, void *, long, long, long, long, long, unsigned int, uint3)",
+          "calls": 17176,
+          "gpu_ms": 33.537917,
+          "share_percent": 1.1192148085795566,
+          "max_registers": 23
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 222,
+          "gpu_ms": 31.723192,
+          "share_percent": 1.0586544853639097,
+          "max_registers": 95
+        },
+        {
+          "name": "void k_get_rows_float_vec<float>(const T1 *, const int *, T1 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 1560,
+          "gpu_ms": 30.16531,
+          "share_percent": 1.0066654305749811,
+          "max_registers": 40
+        },
+        {
+          "name": "void rms_norm_f32<(int)1024, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 4865,
+          "gpu_ms": 26.079187,
+          "share_percent": 0.8703048637789716,
+          "max_registers": 31
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)1, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 320,
+          "gpu_ms": 22.030772,
+          "share_percent": 0.7352026742400207,
+          "max_registers": 32
+        },
+        {
+          "name": "void cpy_scalar<&cpy_1_scalar<float, float>>(const char *, char *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+          "calls": 3768,
+          "gpu_ms": 22.003146,
+          "share_percent": 0.7342807497119762,
+          "max_registers": 31
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)1, (bool)1, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 80,
+          "gpu_ms": 20.577355,
+          "share_percent": 0.6866997863164424,
+          "max_registers": 48
+        },
+        {
+          "name": "void k_bin_bcast<&op_add, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 5808,
+          "gpu_ms": 18.002346,
+          "share_percent": 0.6007675501246229,
+          "max_registers": 23
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)1, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 72,
+          "gpu_ms": 12.379028,
+          "share_percent": 0.4131082873578872,
+          "max_registers": 168
+        },
+        {
+          "name": "void rms_norm_f32<(int)256, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 2856,
+          "gpu_ms": 11.250056,
+          "share_percent": 0.37543265649292684,
+          "max_registers": 30
+        },
+        {
+          "name": "void l2_norm_f32<(int)32>(const float *, float *, int, long, long, long, float)",
+          "calls": 3120,
+          "gpu_ms": 11.019685,
+          "share_percent": 0.3677448017383432,
+          "max_registers": 30
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortOnesweepKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, (bool)1, float, int, unsigned int, int, int, cub::CUB_200500_610_NS::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)",
+          "calls": 252,
+          "gpu_ms": 10.279072,
+          "share_percent": 0.343029342008792,
+          "max_registers": 119
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_silu, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 3672,
+          "gpu_ms": 10.258532,
+          "share_percent": 0.34234388881954875,
+          "max_registers": 24
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 34,
+          "gpu_ms": 7.815627,
+          "share_percent": 0.2608201778522564,
+          "max_registers": 88
+        },
+        {
+          "name": "void k_get_rows_float<float, float>(const T1 *, const int *, T2 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 1751,
+          "gpu_ms": 7.735573,
+          "share_percent": 0.2581486457387376,
+          "max_registers": 40
+        },
+        {
+          "name": "void ssm_conv_f32<(bool)1, (unsigned long)128, (unsigned long)4>(const float *, const float *, const float *, int, int, int, int, float *, int, int, int, long)",
+          "calls": 1560,
+          "gpu_ms": 7.275661,
+          "share_percent": 0.24280063467879487,
+          "max_registers": 46
+        },
+        {
+          "name": "void k_bin_bcast<&op_mul, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 1536,
+          "gpu_ms": 5.193778,
+          "share_percent": 0.17332481471865743,
+          "max_registers": 23
+        },
+        {
+          "name": "void rope_multi<(bool)1, (bool)0, float>(const T3 *, T3 *, int, int, int, int, int, int, int, int, int, int, int, const int *, float, float, float, rope_corr_dims, float, const float *, mrope_sections, bool, bool)",
+          "calls": 1296,
+          "gpu_ms": 3.812421,
+          "share_percent": 0.12722668613377752,
+          "max_registers": 20
+        },
+        {
+          "name": "void k_set_rows<float, long, __half>(const T1 *, const T2 *, T3 *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, uint3, uint3, uint3)",
+          "calls": 1296,
+          "gpu_ms": 2.977082,
+          "share_percent": 0.09935006580031917,
+          "max_registers": 24
+        },
+        {
+          "name": "void flash_attn_combine_results<(int)256>(const float *, const float2 *, float *, int)",
+          "calls": 648,
+          "gpu_ms": 2.744191,
+          "share_percent": 0.0915781145492948,
+          "max_registers": 30
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)4, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 9,
+          "gpu_ms": 2.516504,
+          "share_percent": 0.08397982923774569,
+          "max_registers": 124
+        },
+        {
+          "name": "void unary_op_kernel<&op_sigmoid, float>(const T2 *, T2 *, int)",
+          "calls": 1560,
+          "gpu_ms": 2.138992,
+          "share_percent": 0.07138164012491302,
+          "max_registers": 8
+        },
+        {
+          "name": "void unary_op_kernel<&op_softplus, float>(const T2 *, T2 *, int)",
+          "calls": 1536,
+          "gpu_ms": 2.056213,
+          "share_percent": 0.06861917033171129,
+          "max_registers": 9
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_sigmoid, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 648,
+          "gpu_ms": 1.517647,
+          "share_percent": 0.050646347434050186,
+          "max_registers": 22
+        },
+        {
+          "name": "pad_f32(const float *, unsigned long, unsigned long, unsigned long, unsigned long, float *, int, int, int, int, int, int, int, int, int, int, int, int, bool)",
+          "calls": 63,
+          "gpu_ms": 1.302634,
+          "share_percent": 0.0434710141049971,
+          "max_registers": 32
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortHistogramKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, (bool)1, float, unsigned int, cub::CUB_200500_610_NS::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)",
+          "calls": 63,
+          "gpu_ms": 0.714794,
+          "share_percent": 0.023853837728914872,
+          "max_registers": 64
+        },
+        {
+          "name": "void concat_cont<unsigned int, (int)0>(const T1 *, const T1 *, T1 *, long, long, long, long, long, long)",
+          "calls": 152,
+          "gpu_ms": 0.584963,
+          "share_percent": 0.019521166209312376,
+          "max_registers": 38
+        },
+        {
+          "name": "init_indices(int *, int, int)",
+          "calls": 63,
+          "gpu_ms": 0.324198,
+          "share_percent": 0.010819014267101771,
+          "max_registers": 8
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortExclusiveSumKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, unsigned int>(T2 *)",
+          "calls": 63,
+          "gpu_ms": 0.124613,
+          "share_percent": 0.004158538377369241,
+          "max_registers": 18
+        },
+        {
+          "name": "init_offsets(int *, int, int)",
+          "calls": 63,
+          "gpu_ms": 0.087617,
+          "share_percent": 0.00292392171771774,
+          "max_registers": 8
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_softplus, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 24,
+          "gpu_ms": 0.054978,
+          "share_percent": 0.0018347052306822412,
+          "max_registers": 23
+        }
+      ]
+    },
+    {
+      "name": "pascal/writing",
+      "wall_ms": 7471.730969,
+      "summed_kernel_ms": 6828.92749,
+      "kernels": [
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)2, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 33744,
+          "gpu_ms": 3297.811754,
+          "share_percent": 48.29179631544162,
+          "max_registers": 71
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)2, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 5320,
+          "gpu_ms": 1739.33818,
+          "share_percent": 25.47015153619679,
+          "max_registers": 72
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)1, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 305,
+          "gpu_ms": 752.065058,
+          "share_percent": 11.01293078746689,
+          "max_registers": 56
+        },
+        {
+          "name": "void concat_non_cont<unsigned int, (int)0>(const char *, const char *, char *, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 3696,
+          "gpu_ms": 147.388475,
+          "share_percent": 2.1582960899179207,
+          "max_registers": 30
+        },
+        {
+          "name": "void gated_delta_net_cuda<(int)128, (bool)0, (bool)1>(const float *, const float *, const float *, const float *, const float *, const float *, float *, float *, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, float, long, int)",
+          "calls": 3696,
+          "gpu_ms": 114.354172,
+          "share_percent": 1.6745553700409843,
+          "max_registers": 54
+        },
+        {
+          "name": "quantize_q8_1(const float *, void *, long, long, long, long, long, unsigned int, uint3)",
+          "calls": 40537,
+          "gpu_ms": 78.71524,
+          "share_percent": 1.1526735364413716,
+          "max_registers": 23
+        },
+        {
+          "name": "void k_get_rows_float_vec<float>(const T1 *, const int *, T1 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 3696,
+          "gpu_ms": 71.482998,
+          "share_percent": 1.046767564960629,
+          "max_registers": 40
+        },
+        {
+          "name": "void rms_norm_f32<(int)1024, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 11540,
+          "gpu_ms": 61.836065,
+          "share_percent": 0.9055018535568021,
+          "max_registers": 31
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)1, (bool)1, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 304,
+          "gpu_ms": 57.637214,
+          "share_percent": 0.8440156098362672,
+          "max_registers": 48
+        },
+        {
+          "name": "void cpy_scalar<&cpy_1_scalar<float, float>>(const char *, char *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+          "calls": 8930,
+          "gpu_ms": 51.944787,
+          "share_percent": 0.7606580546662094,
+          "max_registers": 31
+        },
+        {
+          "name": "void mul_mat_q<(ggml_type)12, (int)32, (bool)0>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 174,
+          "gpu_ms": 51.614416,
+          "share_percent": 0.7558202378862863,
+          "max_registers": 108
+        },
+        {
+          "name": "void k_bin_bcast<&op_add, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 13860,
+          "gpu_ms": 43.291957,
+          "share_percent": 0.6339495779299891,
+          "max_registers": 23
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)1, (bool)1, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 152,
+          "gpu_ms": 39.110227,
+          "share_percent": 0.5727140470779841,
+          "max_registers": 48
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)1, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 456,
+          "gpu_ms": 38.597479,
+          "share_percent": 0.5652055766666224,
+          "max_registers": 32
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)12, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 222,
+          "gpu_ms": 31.320401,
+          "share_percent": 0.4586430452785493,
+          "max_registers": 95
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)2, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 1368,
+          "gpu_ms": 28.045787,
+          "share_percent": 0.4106909473130165,
+          "max_registers": 128
+        },
+        {
+          "name": "void rms_norm_f32<(int)256, (bool)1, (bool)0>(const float *, float *, int, long, long, long, float, const float *, long, long, long, uint3, uint3, uint3, uint3, const float *, long, long, long, uint3, uint3, uint3, uint3)",
+          "calls": 6772,
+          "gpu_ms": 27.051498,
+          "share_percent": 0.3961309889380594,
+          "max_registers": 30
+        },
+        {
+          "name": "void l2_norm_f32<(int)32>(const float *, float *, int, long, long, long, float)",
+          "calls": 7392,
+          "gpu_ms": 26.10712,
+          "share_percent": 0.38230190667905306,
+          "max_registers": 30
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_silu, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 8778,
+          "gpu_ms": 24.943108,
+          "share_percent": 0.36525659463401333,
+          "max_registers": 24
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortOnesweepKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, (bool)1, float, int, unsigned int, int, int, cub::CUB_200500_610_NS::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)",
+          "calls": 608,
+          "gpu_ms": 24.165798,
+          "share_percent": 0.35387398731920056,
+          "max_registers": 119
+        },
+        {
+          "name": "void k_get_rows_float<float, float>(const T1 *, const int *, T2 *, long, long, uint3, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)",
+          "calls": 4153,
+          "gpu_ms": 18.314781,
+          "share_percent": 0.2681941055432117,
+          "max_registers": 40
+        },
+        {
+          "name": "void ssm_conv_f32<(bool)1, (unsigned long)128, (unsigned long)4>(const float *, const float *, const float *, int, int, int, int, float *, int, int, int, long)",
+          "calls": 3696,
+          "gpu_ms": 17.628656,
+          "share_percent": 0.25814677379156065,
+          "max_registers": 46
+        },
+        {
+          "name": "void mul_mat_q<(ggml_type)14, (int)32, (bool)0>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 34,
+          "gpu_ms": 14.189259,
+          "share_percent": 0.20778166148019825,
+          "max_registers": 109
+        },
+        {
+          "name": "void k_bin_bcast<&op_mul, float, float, float, const float *>(const T2 *, const T3 *, T4 *, unsigned int, unsigned int, unsigned int, uint3, uint3, uint3, uint3, uint3, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, T5...)",
+          "calls": 3696,
+          "gpu_ms": 12.426253,
+          "share_percent": 0.18196492814130028,
+          "max_registers": 23
+        },
+        {
+          "name": "void rope_multi<(bool)1, (bool)0, float>(const T3 *, T3 *, int, int, int, int, int, int, int, int, int, int, int, const int *, float, float, float, rope_corr_dims, float, const float *, mrope_sections, bool, bool)",
+          "calls": 3076,
+          "gpu_ms": 9.062339,
+          "share_percent": 0.13270515777580763,
+          "max_registers": 20
+        },
+        {
+          "name": "void mul_mat_vec_q<(ggml_type)14, (int)4, (bool)0, (bool)0, (bool)0>(const void *, const void *, const int *, ggml_cuda_mm_fusion_args_device, float *, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, uint3, unsigned int, unsigned int, unsigned int, unsigned int)",
+          "calls": 34,
+          "gpu_ms": 7.77323,
+          "share_percent": 0.11382797681455539,
+          "max_registers": 88
+        },
+        {
+          "name": "void k_set_rows<float, long, __half>(const T1 *, const T2 *, T3 *, long, long, long, long, long, long, long, long, long, long, long, long, long, long, uint3, uint3, uint3, uint3, uint3)",
+          "calls": 3076,
+          "gpu_ms": 7.112189,
+          "share_percent": 0.1041479648219255,
+          "max_registers": 24
+        },
+        {
+          "name": "void flash_attn_combine_results<(int)256>(const float *, const float2 *, float *, int)",
+          "calls": 1538,
+          "gpu_ms": 5.510839,
+          "share_percent": 0.08069845532947663,
+          "max_registers": 30
+        },
+        {
+          "name": "void unary_op_kernel<&op_sigmoid, float>(const T2 *, T2 *, int)",
+          "calls": 3696,
+          "gpu_ms": 4.950312,
+          "share_percent": 0.07249032893157868,
+          "max_registers": 8
+        },
+        {
+          "name": "void unary_op_kernel<&op_softplus, float>(const T2 *, T2 *, int)",
+          "calls": 3696,
+          "gpu_ms": 4.946944,
+          "share_percent": 0.072441009327513,
+          "max_registers": 9
+        },
+        {
+          "name": "void unary_gated_op_kernel<&op_sigmoid, float>(const T2 *, const T2 *, T2 *, long, long, long, long)",
+          "calls": 1538,
+          "gpu_ms": 3.557741,
+          "share_percent": 0.052098093078449134,
+          "max_registers": 22
+        },
+        {
+          "name": "void mul_mat_q<(ggml_type)12, (int)32, (bool)1>(const char *, const int *, const int *, const int *, float *, float *, const float *, uint3, int, int, int, int, int, uint3, uint3, int, int, int, uint3, uint3, int, int, int, uint3)",
+          "calls": 48,
+          "gpu_ms": 3.389277,
+          "share_percent": 0.04963117568553946,
+          "max_registers": 110
+        },
+        {
+          "name": "pad_f32(const float *, unsigned long, unsigned long, unsigned long, unsigned long, float *, int, int, int, int, int, int, int, int, int, int, int, int, bool)",
+          "calls": 152,
+          "gpu_ms": 3.142431,
+          "share_percent": 0.04601646458542204,
+          "max_registers": 32
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)1, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 152,
+          "gpu_ms": 3.135293,
+          "share_percent": 0.04591193865495268,
+          "max_registers": 168
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortHistogramKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, (bool)1, float, unsigned int, cub::CUB_200500_610_NS::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)",
+          "calls": 152,
+          "gpu_ms": 1.689581,
+          "share_percent": 0.02474152789693774,
+          "max_registers": 64
+        },
+        {
+          "name": "void concat_cont<unsigned int, (int)0>(const T1 *, const T1 *, T1 *, long, long, long, long, long, long)",
+          "calls": 306,
+          "gpu_ms": 1.078505,
+          "share_percent": 0.01579318277400541,
+          "max_registers": 38
+        },
+        {
+          "name": "void quantize_mmq_q8_1<(mmq_q8_1_ds_layout)1, (bool)0>(const float *, const int *, void *, long, long, long, long, long, int, int, int)",
+          "calls": 222,
+          "gpu_ms": 0.993357,
+          "share_percent": 0.01454631055102915,
+          "max_registers": 27
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)32, (int)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 9,
+          "gpu_ms": 0.904201,
+          "share_percent": 0.013240746827727702,
+          "max_registers": 128
+        },
+        {
+          "name": "init_indices(int *, int, int)",
+          "calls": 152,
+          "gpu_ms": 0.765452,
+          "share_percent": 0.011208963649429525,
+          "max_registers": 8
+        },
+        {
+          "name": "scale_f32(const float *, float *, float, float, long)",
+          "calls": 48,
+          "gpu_ms": 0.555522,
+          "share_percent": 0.008134835240430998,
+          "max_registers": 21
+        },
+        {
+          "name": "void cub::CUB_200500_610_NS::DeviceRadixSortExclusiveSumKernel<cub::CUB_200500_610_NS::DeviceRadixSortPolicy<float, int, unsigned int>::Policy900, unsigned int>(T2 *)",
+          "calls": 152,
+          "gpu_ms": 0.297921,
+          "share_percent": 0.004362632352390082,
+          "max_registers": 18
+        },
+        {
+          "name": "void flash_attn_tile<(int)256, (int)256, (int)4, (int)4, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)",
+          "calls": 9,
+          "gpu_ms": 0.238656,
+          "share_percent": 0.0034947801151714968,
+          "max_registers": 124
+        },
+        {
+          "name": "void quantize_mmq_q8_1<(mmq_q8_1_ds_layout)0, (bool)0>(const float *, const int *, void *, long, long, long, long, long, int, int, int)",
+          "calls": 34,
+          "gpu_ms": 0.228608,
+          "share_percent": 0.0033476413438971804,
+          "max_registers": 27
+        },
+        {
+          "name": "init_offsets(int *, int, int)",
+          "calls": 152,
+          "gpu_ms": 0.214409,
+          "share_percent": 0.003139717039227195,
+          "max_registers": 8
+        }
+      ]
+    }
+  ],
+  "note": "Activity durations, not unprofiled throughput; overlapping kernels may sum beyond wall time."
+}
